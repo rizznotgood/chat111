@@ -1,27 +1,49 @@
-# Chat Website
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Your GF</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #chat-box { width: 100%; height: 300px; overflow-y: scroll; border: 1px solid #ccc; margin-bottom: 10px; }
+        #message { width: 80%; padding: 5px; }
+        button { width: 15%; padding: 5px; }
+        h2 { text-align: center; }
+    </style>
+</head>
+<body>
+    <h2>Chat with Your GF</h2>
+    <div id="chat-box"></div>
+    <input type="text" id="message" placeholder="Type a message...">
+    <button onclick="sendMessage()">Send</button>
 
-Welcome to the **Chat Website**! This is a simple real-time chat website where you can chat with your loved ones using the Tawk.to live chat feature.
+    <!-- Start of Tawk.to Script -->
+    <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/67a126593a84273260795ab9/1ij6nrjit';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+    </script>
+    <!-- End of Tawk.to Script -->
 
-## Features
-- Real-time chat powered by [Tawk.to](https://www.tawk.to/)
-- Easy to use interface
-- No sign-up required—just type and send messages!
-
-## How to Use[
-1. Go to the website: [https://rizznotgood.github.io/](https://rizznotgood.github.io/chat111/))
-2. Type your message in the input box.
-3. Click the "Send" button to send your message.
-4. Chat in real-time with your partner!
-
-## Technologies Used
-- HTML
-- CSS
-- JavaScript
-- [Tawk.to](https://www.tawk.to/)
-
-## Installation
-
-If you'd like to make changes or use this project locally:
-1. Clone the repository:
-   ```bash
-   git clone https://rizznotgood.github.io/chat111/
+    <script>
+        function sendMessage() {
+            const message = document.getElementById("message").value;
+            if (message) {
+                const chatBox = document.getElementById("chat-box");
+                const newMessage = document.createElement("div");
+                newMessage.innerText = message;
+                chatBox.appendChild(newMessage);
+                document.getElementById("message").value = ""; // clear input
+                chatBox.scrollTop = chatBox.scrollHeight; // scroll to the bottom
+            }
+        }
+    </script>
+</body>
+</html>
