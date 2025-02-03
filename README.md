@@ -7,8 +7,8 @@ Welcome to the **Chat Website**! This is a simple real-time chat website where y
 - Easy to use interface
 - No sign-up required—just type and send messages!
 
-## How to Use
-1. Go to the website: [https://rizznotgood.github.io/](https://rizznotgood.github.io/)
+## How to Use[
+1. Go to the website: [https://rizznotgood.github.io/](https://rizznotgood.github.io/chat111/))
 2. Type your message in the input box.
 3. Click the "Send" button to send your message.
 4. Chat in real-time with your partner!
@@ -24,4 +24,4 @@ Welcome to the **Chat Website**! This is a simple real-time chat website where y
 If you'd like to make changes or use this project locally:
 1. Clone the repository:
    ```bash
-   git clone https://github.com/rizznotgood/my-chat-website.git
+   git clone https://rizznotgood.github.io/chat111/
